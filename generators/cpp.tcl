@@ -406,7 +406,7 @@ proc build_sm_body { gdb machines } {
             set name [ dict get $machine "name" ]
             set machine_name [ make_sm_name $name ]
             #item 2272
-            set callback "${machine_name}_callback"
+            set callback "const ${machine_name}_callback"
             foreach message $messages {
                 #item 2273
                 lappend lines \
